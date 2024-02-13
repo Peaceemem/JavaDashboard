@@ -90,7 +90,7 @@ public class RegistrationForm extends JDialog {
 
             //we need to create a sql statement that allows us to add new user
              Statement stat = conn.createStatement();
-            String sql = "INSERT INTO userid (username, email, password)  " +
+            String sql = "INSERT INTO userid (name, email, phone, address, password)  " +
                     "VALUES (?, ?, ?, ?, ?)";
             PreparedStatement prepareStatement = conn.prepareStatement(sql);
             prepareStatement.setString(1, name);
